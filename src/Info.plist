@@ -9,7 +9,7 @@
 	<key>CFBundleName</key>
 	<string>Dictionary: Define (Live)</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>LBAssociatedApplication</key>
 	<string>com.apple.Dictionary</string>
 	<key>LBDebugLogEnabled</key>
@@ -19,9 +19,12 @@
 		<key>LBAuthor</key>
 		<string>Nima Jahanshahi</string>
 		<key>LBChangelog</key>
-		<string>Initial Release</string>
+		<string>
+			Highlight suggested words
+			⌥ + ⇧ + Enter = Force Update
+		</string>
 		<key>LBDownload</key>
-		<string>https://github.com/nbjahan/launchbar-livedic/releases/download/v1.0/Dictionary.Live-1.0.lbaction</string>
+		<string>https://github.com/nbjahan/launchbar-livedic/releases/download/v1.1/Dictionary.Live-1.1.lbaction</string>
 		<key>LBResult</key>
 		<string>List of auto corrected words for the current query.</string>
 		<key>LBSummary</key>
