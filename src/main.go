@@ -106,16 +106,19 @@ func main() {
 
 		i = v.NewItem(word)
 		i.SetSubtitle(def)
-		i.SetIcon("com.apple.Dictionary")
+		i.SetIcon("DictionaryOn")
 		i.Run("openDictionary", word)
 	}
 	if len(definitions) > 0 {
 		if definitions[0][0] != q {
 			i = v.NewItem(q)
-			i.SetIcon("com.apple.Dictionary")
+			i.SetIcon("DictionaryOff")
 			i.Run("openDictionary", q)
 			i.SetSubtitle(q)
+		} else {
+			v.Items[0].SetIcon("com.apple.Dictionary")
 		}
+
 		// i = v.NewItem("⌃+Enter to open Dictionary.app")
 		// i.SetIcon("LinkArrowTemplate")
 		// i.SetAction("")
