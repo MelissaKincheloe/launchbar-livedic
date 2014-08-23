@@ -29,7 +29,7 @@
 		<key>LBTwitter</key>
 		<string>@nbjahan</string>
 		<key>LBUpdate</key>
-		<string>http://hastebin.com/raw/itoveyunoc</string>
+		<string>https://raw.githubusercontent.com/nbjahan/launchbar-livedic/master/src/Info.plist</string>
 		<key>LBWebsite</key>
 		<string>http://github.com/nbjahan/launchbar-livedic</string>
 	</dict>
