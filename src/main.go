@@ -55,9 +55,9 @@ func main() {
 		defer fd.Close()
 		var pl map[string]interface{}
 		decoder := plist.NewDecoder(fd)
-		if err := decoder.Decode(&pl); err == nil {
+		if err := decoder.Decode(&pl); err == nil && pl["LaunchBarWindowWidth"] != nil {
 			width = float64(reflect.ValueOf(pl["LaunchBarWindowWidth"]).Float())
-		} else {
+		} else if err != nil {
 			pb.Logger.Println(err)
 		}
 	} else {
