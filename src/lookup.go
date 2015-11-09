@@ -11,17 +11,18 @@ define(const char *s, int *start, int *len) {
   NSString *word = [[NSString alloc] initWithCString:s encoding:NSUTF8StringEncoding];
   CFRange termRange = DCSGetTermRangeInString(NULL, (CFStringRef)word, 0);
 
+  NSString *definition = @"";
   *start = termRange.location;
   *len = termRange.length;
 
   if(*start != -1) {
+    definition = (NSString*)DCSCopyTextDefinition(NULL, (CFStringRef)word, termRange);
     NSString *first_part = [word substringToIndex: *start];
     NSString *second_part = [word substringWithRange: NSMakeRange(*start, *len)];
     *start = [first_part lengthOfBytesUsingEncoding: NSUTF8StringEncoding];
     *len = [second_part lengthOfBytesUsingEncoding: NSUTF8StringEncoding];
   }
 
-  NSString *definition = (NSString*)DCSCopyTextDefinition(NULL, (CFStringRef)word, termRange);
   return [definition UTF8String];
 }
 
