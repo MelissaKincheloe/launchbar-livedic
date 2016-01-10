@@ -21,7 +21,7 @@
 		<key>LBChangelog</key>
 		<string>
 			Fixed unicode lookup (thanks to @blahgeek)
-			Added support for @prenagha'a Action Updates
+			Added support for @prenagha's Action Updates
 			Added support for LaunchBar URL scheme
 			x-launchbar:action/nbjahan.launchbar.livedic/lookup?YOUR_QUERY_STRING
 		</string>
