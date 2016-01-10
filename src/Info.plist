@@ -22,17 +22,17 @@
 		<string>
 			Fixed: #1 (panic: reflect: call of reflect.Value.Float on zero Value)
 		</string>
-		<key>LBDownload</key>
 		<string>https://github.com/nbjahan/launchbar-livedic/releases/download/v1.1.1/Dictionary.Live-1.1.1.lbaction</string>
+		<key>LBDownloadURL</key>
 		<key>LBResult</key>
 		<string>List of auto corrected words for the current query.</string>
 		<key>LBSummary</key>
 		<string>Live search in Dictionary.app with auto correction. Hold ⌃ to pass the exact query. Hold ⇧ to paste the item in the frontmost app.</string>
 		<key>LBTwitter</key>
 		<string>@nbjahan</string>
-		<key>LBUpdate</key>
+		<key>LBUpdateURL</key>
 		<string>https://raw.githubusercontent.com/nbjahan/launchbar-livedic/master/src/Info.plist</string>
-		<key>LBWebsite</key>
+		<key>LBWebsiteURL</key>
 		<string>http://github.com/nbjahan/launchbar-livedic</string>
 	</dict>
 	<key>LBRequiredApplication</key>

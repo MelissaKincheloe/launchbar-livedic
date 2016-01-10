@@ -28,9 +28,9 @@ all:
 	@plutil -replace CFBundleIconFile -string $(BUNDLE_ICON) $(PWD)/src/Info.plist
 	@plutil -replace LBDescription.LBAuthor -string $(AUTHOR) $(PWD)/src/Info.plist
 	@plutil -replace LBDescription.LBTwitter -string $(TWITTER) $(PWD)/src/Info.plist
-	@plutil -replace LBDescription.LBWebsite -string $(WEBSITE) $(PWD)/src/Info.plist
-	@plutil -replace LBDescription.LBUpdate -string $(UPDATE_LINK) $(PWD)/src/Info.plist
-	@plutil -replace LBDescription.LBDownload -string $(DOWNLOAD_LINK) $(PWD)/src/Info.plist
+	@plutil -replace LBDescription.LBWebsiteURL -string $(WEBSITE) $(PWD)/src/Info.plist
+	@plutil -replace LBDescription.LBUpdateURL -string $(UPDATE_LINK) $(PWD)/src/Info.plist
+	@plutil -replace LBDescription.LBDownloadURL -string $(DOWNLOAD_LINK) $(PWD)/src/Info.plist
 	@plutil -replace LBScripts.LBDefaultScript.LBScriptName -string $(SCRIPT_NAME) $(PWD)/src/Info.plist
 	@install -pm 0644 ./src/Info.plist $(LBACTION_PATH)/Contents/
 	gb build $(LDFLAGS) $(SCRIPT_NAME) && mv bin/$(SCRIPT_NAME) $(LBACTION_PATH)/Contents/Scripts/
