@@ -10,6 +10,10 @@ Live search in Dictionary.app
 - Spell checking
 - Automatic update checks.
 
+## URL Scheme
+
+`open "x-launchbar:action/nbjahan.launchbar.livedic/lookup?hello"`
+
 ## Secrets
 
 - `⇧+Enter` to paste the selected word in the frontmost application.
