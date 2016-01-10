@@ -39,6 +39,13 @@
 	<string>com.apple.Dictionary</string>
 	<key>LBScripts</key>
 	<dict>
+		<key>LBActionURLScript</key>
+		<dict>
+			<key>LBRunInBackground</key>
+			<true/>
+			<key>LBScriptName</key>
+			<string>actionUrl.js</string>
+		</dict>
 		<key>LBDefaultScript</key>
 		<dict>
 			<key>LBKeepWindowActive</key>

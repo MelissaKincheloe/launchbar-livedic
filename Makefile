@@ -34,7 +34,8 @@ all:
 	@plutil -replace LBScripts.LBDefaultScript.LBScriptName -string $(SCRIPT_NAME) $(PWD)/src/Info.plist
 	@install -pm 0644 ./src/Info.plist $(LBACTION_PATH)/Contents/
 	gb build $(LDFLAGS) $(SCRIPT_NAME) && mv bin/$(SCRIPT_NAME) $(LBACTION_PATH)/Contents/Scripts/
-	-@cp -r ./resources/* $(LBACTION_PATH)/Contents/Resources/
+	-@cp -f ./src/*.js $(LBACTION_PATH)/Contents/Scripts/
+	-@cp -rf ./resources/* $(LBACTION_PATH)/Contents/Resources/
 
 	@echo "Refreshing the LaunchBar"
 	@osascript -e 'run script "tell application \"LaunchBar\" \n repeat with rule in indexing rules \n if name of rule is \"Actions\" then \n update rule \n exit repeat \n end if \n end repeat \n activate \n end tell"'
