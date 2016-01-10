@@ -21,8 +21,6 @@ DOWNLOAD_LINK = https://github.com/nbjahan/$(SLUG)/releases/download/v$(BUNDLE_V
 all:
 	@$(RM) -rf $(DESTDIR)
 
-	go install github.com/nbjahan/go-launchbar
-
 	@install -d ${LBACTION_PATH}/Contents/{Resources,Scripts}
 	@plutil -replace CFBundleName -string $(BUNDLE_NAME) $(PWD)/src/Info.plist
 	@plutil -replace CFBundleVersion -string $(BUNDLE_VERSION) $(PWD)/src/Info.plist
@@ -35,7 +33,7 @@ all:
 	@plutil -replace LBDescription.LBDownload -string $(DOWNLOAD_LINK) $(PWD)/src/Info.plist
 	@plutil -replace LBScripts.LBDefaultScript.LBScriptName -string $(SCRIPT_NAME) $(PWD)/src/Info.plist
 	@install -pm 0644 ./src/Info.plist $(LBACTION_PATH)/Contents/
-	go build $(LDFLAGS) -o $(LBACTION_PATH)/Contents/Scripts/$(SCRIPT_NAME) ./src
+	gb build $(LDFLAGS) $(SCRIPT_NAME) && mv bin/$(SCRIPT_NAME) $(LBACTION_PATH)/Contents/Scripts/
 	-@cp -r ./resources/* $(LBACTION_PATH)/Contents/Resources/
 
 	@echo "Refreshing the LaunchBar"
