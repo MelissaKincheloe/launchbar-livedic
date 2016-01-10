@@ -9,7 +9,7 @@
 	<key>CFBundleName</key>
 	<string>Dictionary: Define (Live)</string>
 	<key>CFBundleVersion</key>
-	<string>1.1.1</string>
+	<string>1.2.0</string>
 	<key>LBAssociatedApplication</key>
 	<string>com.apple.Dictionary</string>
 	<key>LBDebugLogEnabled</key>
@@ -20,10 +20,13 @@
 		<string>Nima Jahanshahi</string>
 		<key>LBChangelog</key>
 		<string>
-			Fixed: #1 (panic: reflect: call of reflect.Value.Float on zero Value)
+			Fixed unicode lookup (thanks to @blahgeek)
+			Added support for @prenagha'a Action Updates
+			Added support for LaunchBar URL scheme
+			x-launchbar:action/nbjahan.launchbar.livedic/lookup?YOUR_QUERY_STRING
 		</string>
-		<string>https://github.com/nbjahan/launchbar-livedic/releases/download/v1.1.1/Dictionary.Live-1.1.1.lbaction</string>
 		<key>LBDownloadURL</key>
+		<string>https://github.com/nbjahan/launchbar-livedic/releases/download/v1.2.0/Dictionary.Live-1.2.0.lbaction</string>
 		<key>LBResult</key>
 		<string>List of auto corrected words for the current query.</string>
 		<key>LBSummary</key>
@@ -61,6 +64,6 @@
 	<key>LBTextInputTitle</key>
 	<string>Define</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2014 nbjahan</string>
+	<string>Copyright © 2016 nbjahan</string>
 </dict>
 </plist>
