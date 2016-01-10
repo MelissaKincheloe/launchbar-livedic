@@ -25,6 +25,15 @@
 			Added support for LaunchBar URL scheme
 			x-launchbar:action/nbjahan.launchbar.livedic/lookup?YOUR_QUERY_STRING
 		</string>
+
+		<!-- TODO: remove LBDownload (deprecated) -->
+		<key>LBDownload</key>
+		<string>https://github.com/nbjahan/launchbar-livedic/releases/download/v1.2.0/Dictionary.Live-1.2.0.lbaction</string>
+
+		<!-- TODO: remove LBUpdate (deprecated) -->
+		<key>LBUpdate</key>
+		<string>https://raw.githubusercontent.com/nbjahan/launchbar-livedic/master/src/Info.plist</string>
+		
 		<key>LBDownloadURL</key>
 		<string>https://github.com/nbjahan/launchbar-livedic/releases/download/v1.2.0/Dictionary.Live-1.2.0.lbaction</string>
 		<key>LBResult</key>
